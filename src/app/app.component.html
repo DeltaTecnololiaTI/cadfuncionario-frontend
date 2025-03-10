@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <span>Cadastro de Funcionários</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/funcionarios">Funcionários</button>
+  <button mat-button routerLink="/login" *ngIf="!authService.isAuthenticated()">Login</button>
+  <button mat-button (click)="authService.logout()" *ngIf="authService.isAuthenticated()">Logout</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

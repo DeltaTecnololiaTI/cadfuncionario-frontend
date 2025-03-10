@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Detalhes do Funcionário</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p><strong>Nome:</strong> {{ funcionario.nome }} {{ funcionario.sobrenome }}</p>
+    <p><strong>Email:</strong> {{ funcionario.email }}</p>
+    <p><strong>Documento:</strong> {{ funcionario.documento }}</p>
+    <p><strong>Data de Nascimento:</strong> {{ funcionario.dataNascimento | date }}</p>
+    <p><strong>Cargo:</strong> {{ funcionario.nomeCargo }}</p>
+    <p><strong>Gestor:</strong> {{ funcionario.nomeGestor }}</p>
+    <p><strong>Telefones:</strong></p>
+    <ul>
+      <li *ngFor="let telefone of funcionario.telefones">
+        {{ telefone.numero }} ({{ telefone.tipo }})
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>
