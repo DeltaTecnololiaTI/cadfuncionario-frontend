@@ -13,7 +13,7 @@ export class AuthService {
 
   // Método para realizar o login
   login(username: string, password: string): Observable<any> {
-    return this.http.post<any>('http://localhost:5000/api/auth/login', { username, password }).pipe(
+    return this.http.post<any>('http://localhost:5005/api/auth/login', { username, password }).pipe(
       tap(response => {
         if (response.token) {
           this.setToken(response.token); // Armazena o token

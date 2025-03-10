@@ -7,7 +7,7 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class FuncionarioService {
-  private apiUrl = 'http://localhost:5000/api/funcionario';
+  private apiUrl = 'http://localhost:5005/api/funcionario';
 
   constructor(private http: HttpClient) { }
 
